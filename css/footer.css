@@ -1,0 +1,52 @@
+/* ===== Footer ===== */
+footer {
+    background-color: #333; /* Fundo escuro */
+    color: #fff; /* Texto branco */
+    padding: 1.5em 0; /* Espaçamento interno */
+    text-align: center; /* Centraliza o conteúdo */
+}
+
+/* Texto no Rodapé */
+footer p {
+    font-size: 0.9rem; /* Tamanho da fonte */
+    margin-bottom: 1em; /* Espaçamento inferior */
+}
+
+/* Links no Rodapé */
+footer ul {
+    list-style: none; /* Remove marcadores de lista */
+    padding: 0; /* Remove espaçamento interno */
+    margin: 0; /* Remove margens */
+    display: flex; /* Exibe os links em linha */
+    justify-content: center; /* Centraliza os links */
+    gap: 15px; /* Espaçamento entre os links */
+}
+
+footer ul li a {
+    color: #fff; /* Cor dos links */
+    text-decoration: none; /* Remove sublinhado */
+    font-size: 0.9rem; /* Tamanho da fonte */
+    transition: color 0.3s ease; /* Animação de transição suave */
+}
+
+footer ul li a:hover {
+    color: #4CAF50; /* Verde no hover */
+}
+
+/* Ícones Sociais */
+footer .social-icons {
+    display: flex; /* Exibe os ícones em linha */
+    justify-content: center; /* Centraliza os ícones */
+    gap: 15px; /* Espaçamento entre os ícones */
+    margin-top: 1em; /* Espaçamento superior */
+}
+
+footer .social-icons img {
+    width: 24px; /* Largura dos ícones */
+    height: 24px; /* Altura dos ícones */
+    transition: transform 0.3s ease; /* Animação suave */
+}
+
+footer .social-icons img:hover {
+    transform: scale(1.2); /* Aumenta o tamanho ao passar o mouse */
+}

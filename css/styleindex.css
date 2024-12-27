@@ -1,0 +1,206 @@
+/* ===== Reset ===== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* ===== Variáveis Globais ===== */
+:root {
+    --primary-color: #2C3E50; /* Azul escuro */
+    --secondary-color: #1E824C; /* Verde */
+    --text-color: #2C3E50; /* Texto principal */
+    --text-light-color: #BDC3C7; /* Texto claro */
+    --background-color: #F4F4F4; /* Fundo claro */
+    --white-color: #FFFFFF; /* Branco */
+    --font-family: 'Poppins', sans-serif; /* Fonte moderna */
+    --transition-speed: 0.3s ease-in-out;
+    --border-radius: 5px;
+    --container-width: 90%;
+    --max-width: 1200px;
+}
+
+/* ===== Tema Escuro ===== */
+body.dark-mode {
+    --primary-color: #1E1E1E;
+    --secondary-color: #16A085;
+    --text-color: #FFFFFF;
+    --background-color: #121212;
+}
+
+/* ===== Configurações Gerais ===== */
+body {
+    font-family: var(--font-family);
+    background-color: var(--background-color);
+    color: var(--text-color);
+    line-height: 1.6;
+    padding: 0 10px;
+    transition: var(--transition-speed);
+}
+
+img {
+    max-width: 100%;
+    display: block;
+}
+
+/* ===== Container ===== */
+.container {
+    width: var(--container-width);
+    max-width: var(--max-width);
+    margin: 0 auto;
+}
+
+
+
+/* ===== Hero Section ===== */
+.hero {
+    text-align: center;
+    padding: 60px 20px;
+    background: linear-gradient(45deg, var(--primary-color), var(--secondary-color));
+    color: var(--white-color);
+}
+
+.hero h1 {
+    font-size: 24px;
+    margin-bottom: 15px;
+    animation: fadeIn 1s ease-in-out;
+}
+
+.hero p {
+    font-size: 16px;
+    margin-bottom: 20px;
+}
+
+.hero .cta {
+    background-color: var(--secondary-color);
+    color: var(--white-color);
+    padding: 10px 20px;
+    border-radius: var(--border-radius);
+    text-decoration: none;
+    font-weight: bold;
+    transition: var(--transition-speed);
+}
+
+.hero .cta:hover {
+    background-color: #145A32;
+}
+
+/* ===== Sobre (About) ===== */
+.about {
+    padding: 40px 20px;
+    background-color: var(--background-color);
+    text-align: center;
+}
+
+.about h2 {
+    font-size: 28px;
+    margin-bottom: 20px;
+}
+
+.about p {
+    font-size: 16px;
+    max-width: 600px;
+    margin: 0 auto;
+    color: var(--text-color);
+}
+
+/* ===== Serviços (Services) ===== */
+.services {
+    padding: 40px 20px;
+    background-color: var(--white-color);
+    text-align: center;
+}
+
+.services h2 {
+    font-size: 28px;
+    margin-bottom: 30px;
+}
+
+.services-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 40px;
+}
+
+.service {
+    text-align: center;
+}
+
+.service img {
+    width: 80px;
+    height: 80px;
+    margin-bottom: 15px;
+}
+
+.service h3 {
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+.service p {
+    font-size: 14px;
+    color: #7F8C8D;
+}
+
+/* ===== Projetos (Portfolio) ===== */
+.portfolio {
+    padding: 40px 20px;
+    background-color: var(--background-color);
+    text-align: center;
+}
+
+.projects-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+}
+
+.project {
+    text-align: center;
+}
+
+.project img {
+    width: 100%;
+    border-radius: var(--border-radius);
+    margin-bottom: 15px;
+}
+
+.project h3 {
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+.project p {
+    font-size: 14px;
+    color: #7F8C8D;
+}
+
+
+
+/* ===== Animações ===== */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* ===== Responsividade Adicional ===== */
+@media (min-width: 1024px) {
+    .hero h1 {
+        font-size: 36px;
+    }
+
+    .hero p {
+        font-size: 18px;
+    }
+
+    .services h2,
+    .portfolio h2 {
+        font-size: 36px;
+    }
+}

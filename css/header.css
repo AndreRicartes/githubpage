@@ -1,0 +1,115 @@
+/* ===== Header ===== */
+header {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    background-color: #ffffff; /* Fundo branco para a área do logotipo */
+    /*padding: 1em;*/
+    display: flex;
+    flex-direction: column; /* Alinha logo e menu verticalmente */
+    align-items: center; /* Centraliza os itens horizontalmente */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Logo */
+header .logo {
+    background-color: #ffffff; /* Fundo branco específico para a logo */
+}
+
+header .logo img {
+    height: 50px;
+    object-fit: cover;
+
+    
+    
+}
+
+/* Navegação */
+nav {
+    width: 100%; /* Faz o menu ocupar toda a largura disponível */
+    background-color: #333333; /* Fundo do menu */
+}
+
+.nav-links {
+    display: flex; /* Exibe os links em linha por padrão */
+    justify-content: center; /* Centraliza os links horizontalmente */
+    gap: 15px;
+    padding: 1em 0;
+}
+
+.nav-links li {
+    list-style: none;
+}
+
+.nav-links li a {
+    color: #fff; /* Cor dos links */
+    text-decoration: none; /* Remove sublinhado */
+    font-weight: bold; /* Texto em negrito */
+    padding: 0.5em 1em;
+    transition: background-color 0.3s ease; /* Transição suave para efeitos */
+}
+
+.nav-links li a:hover {
+    background-color: #555555; /* Tom mais claro de cinza no hover */
+}
+
+/* Botão de Chamada para Ação (CTA) - opcional se não for necessário ao lado do menu */
+/*
+.cta {
+    background-color: #fff;
+    color: #4CAF50;
+    padding: 0.5em 1em;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.cta:hover {
+    background-color: #eee;
+}
+*/
+
+/* Botão do Menu (Menu Toggle) - Apenas para dispositivos móveis, se necessário */
+/*
+.menu-toggle {
+    display: none; */ /* Oculta o botão de alternância em telas grandes por padrão */
+/*}*/
+
+/* Estilos para o menu hamburger */
+.hamburger {
+    display: none; /* Esconde o hamburger por padrão */
+    flex-direction: column;
+    cursor: pointer;
+    margin: 1em;
+}
+
+.hamburger div {
+    width: 25px;
+    height: 3px;
+    background-color: #333;
+    margin: 4px 0;
+    transition: 0.4s;
+}
+
+/* Estilos para o menu em dispositivos móveis */
+@media (max-width: 768px) {
+    .nav-links {
+        display: none; /* Esconde os links de navegação por padrão */
+        flex-direction: column;
+        width: 100%;
+        text-align: center;
+    }
+
+    .nav-links.active {
+        display: flex; /* Mostra os links de navegação quando a classe 'active' é adicionada */
+    }
+
+    .nav-links li {
+        margin: 0.5em 0;
+    }
+
+    .hamburger {
+        display: flex; /* Mostra o hamburger em dispositivos móveis */
+    }
+}

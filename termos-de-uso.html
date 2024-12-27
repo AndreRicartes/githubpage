@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Termos de Uso</title>
+    <link rel="stylesheet" href="termos-de-uso.css">
+    <link rel="stylesheet" href="css/header.css">
+    <link rel="stylesheet" href="css/footer.css">
+</head>
+<body>
+    <!-- Header será carregado aqui -->
+    <div id="header-placeholder"></div>
+    <header>
+        <h1>Termos de Uso</h1>
+    </header>
+    <main>
+        <section>
+            <h2>1. Aceitação dos Termos</h2>
+            <p>Ao acessar e utilizar este site, você concorda com os termos e condições descritos neste documento. Caso não concorde com os termos, recomendamos que não utilize este site.</p>
+        </section>
+
+        <section>
+            <h2>2. Alterações nos Termos</h2>
+            <p>Reservamo-nos o direito de modificar ou atualizar estes Termos de Uso a qualquer momento, sem aviso prévio. As alterações entrarão em vigor a partir da data de publicação no site. Recomendamos que você revise esta página periodicamente.</p>
+        </section>
+
+        <section>
+            <h2>3. Uso do Site</h2>
+            <p>Você se compromete a utilizar este site apenas para fins lícitos e de acordo com os Termos de Uso. É estritamente proibido:</p>
+            <ul>
+                <li>Violar quaisquer leis ou regulamentos aplicáveis;</li>
+                <li>Transmitir ou divulgar material ilícito, ofensivo ou prejudicial;</li>
+                <li>Realizar atividades que comprometam a segurança ou a funcionalidade do site;</li>
+                <li>Copiar ou distribuir conteúdo sem autorização prévia.</li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>4. Propriedade Intelectual</h2>
+            <p>Todo o conteúdo deste site, incluindo textos, imagens, logotipos e design, é protegido por direitos autorais e outras leis de propriedade intelectual. É proibida a reprodução, distribuição ou uso não autorizado de qualquer parte deste conteúdo sem permissão expressa.</p>
+        </section>
+
+        <section>
+            <h2>5. Isenção de Responsabilidade</h2>
+            <p>Este site é fornecido "como está". Não garantimos que o site estará disponível sem interrupções ou livre de erros. Não nos responsabilizamos por danos diretos ou indiretos resultantes do uso ou da incapacidade de usar este site.</p>
+        </section>
+
+        <section>
+            <h2>6. Links Externos</h2>
+            <p>Nosso site pode conter links para sites de terceiros. Não somos responsáveis pelo conteúdo ou práticas de privacidade desses sites e recomendamos que você revise os termos de uso e políticas de privacidade de qualquer site que visitar.</p>
+        </section>
+
+        <section>
+            <h2>7. Lei Aplicável</h2>
+            <p>Estes Termos de Uso são regidos pelas leis brasileiras. Quaisquer disputas decorrentes do uso deste site serão resolvidas nos tribunais competentes.</p>
+        </section>
+
+        <section>
+            <h2>8. Contato</h2>
+            <p>Se você tiver dúvidas sobre estes Termos de Uso, entre em contato conosco através do e-mail: <a href="mailto:contato@seudominio.com">contato@seudominio.com</a>.</p>
+        </section>
+    </main>
+    <!-- Footer será carregado aqui -->
+    <div id="footer-placeholder"></div>
+
+    <!-- Importação dos arquivos JavaScript -->
+    <script>
+        // Função para carregar HTML em um elemento
+        function loadHTML(selector, file) {
+            fetch(file)
+                .then(response => {
+                    if (!response.ok) throw new Error(`Erro ao carregar ${file}`);
+                    return response.text();
+                })
+                .then(data => {
+                    document.querySelector(selector).innerHTML = data;
+                })
+                .catch(error => console.error(error));
+        }    
+
+        // Carrega o header e o footer
+        loadHTML('#header-placeholder', 'header.html');
+        loadHTML('#footer-placeholder', 'footer.html');
+    </script>
+    <script src="js/menu.js"></script>
+</body>
+</html>
