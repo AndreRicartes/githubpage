@@ -15,9 +15,7 @@ header {
     color: #fff;
 }
 
-body {    
-    background-color: ##ffffff;    
-}
+
 
 .logo img {
     height: 40px;
@@ -30,13 +28,13 @@ body {
     display: none; /* Esconde os links de navegação por padrão */
     flex-direction: column;
     list-style: none;
-    position: absolute;
+    position: fixed;
     top: 60px;
     right: 25px;
     background-color: #fff;
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    z-index: 999; /* Garante que o menu de navegação esteja atrás do menu hambúrguer */
+    /* Garante que o menu de navegação esteja atrás do menu hambúrguer */
 }
 
 .nav-links li {
@@ -104,26 +102,33 @@ body {
     bottom: -10px;
 }
 
-input {
+/* Oculta o checkbox para o "checkbox hack" */
+input[type="checkbox"] {
     display: none;
 }
 
-input:checked ~ label .menu {
-    box-shadow: 0 0 0 130vw #333333, 0 0 0 130vh #333333;
+/* Animação do menu ao clicar (checkbox marcado) */
+input[type="checkbox"]:checked ~ label .menu {
+    box-shadow: 0 0 0 130vw #333, 0 0 0 130vh #333;
 }
 
-input:checked ~ label .hamburguer {
-    transform: rotate(45deg);    
+input[type="checkbox"]:checked ~ label .hamburguer {
+    transform: rotate(45deg);
 }
 
-input:checked ~ label .hamburguer::before {
+input[type="checkbox"]:checked ~ label .hamburguer::before {
     transform: rotate(90deg);
     top: 0;
 }
 
-input:checked ~ label .hamburguer::after {
+input[type="checkbox"]:checked ~ label .hamburguer::after {
     transform: rotate(90deg);
     bottom: 0;
+}
+
+/* Exibe .nav-links quando o checkbox está marcado */
+#menu-hamburguer:checked ~ .nav-links {
+    display: flex;
 }
 
 // só aparecer o menu ao clicar
@@ -143,10 +148,3 @@ ul {
     z-index: 2;
 }
 
-a {
-    display: block;
-    margin-bottom: 40px;
-    color: #fff;
-    font-size: 47px;
-    text-decoration: none;
-}
