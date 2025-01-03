@@ -39,9 +39,10 @@
         <li><a href="index.html">Home</a></li>
         <li><a href="#about">Sobre</a></li>
         <li><a href="#services">Serviços</a></li>
-        <li><a href="https://andrericartes.github.io/githubpage/#">PTAM(Beta)</a></li>
+        <li><a href="https://avaliacaoptam.streamlit.app/">PTAM(Beta)</a></li>
         <li><a href="#contact">Contato</a></li>
     </ul>
+    <div class="overlay"></div> <!-- Camada escura -->
 
     <!-- Seção Home (Hero Section) -->
     <section id="home" class="hero">
@@ -155,5 +156,18 @@
   </script> 
   
   </script> 
+  <script>
+        document.addEventListener('DOMContentLoaded', () => {
+    const menuHamburguer = document.getElementById('menu-hamburguer');
+    const navLinks = document.querySelectorAll('.nav-links a'); // Seleciona todos os links do menu
+
+    // Adiciona um evento de clique a cada item do menu
+    navLinks.forEach(link => {
+        link.addEventListener('click', () => {
+        menuHamburguer.checked = false; // Desmarca o checkbox, fechando o menu
+        });
+    });
+    });
+  </script>
   </body>
 </html>
